@@ -2,7 +2,7 @@
 
 **Precise code edits for AI agents.** Surgical Code Editor makes targeted search-replace edits and clean diffs instead of rewriting whole files.
 
-Demo: **Watch the demo:** [Surgical Code Editor](https://christopherhammer.dev/assets/videos/narrated/project-demos/surgical-code-editor-narrated.mp4)
+**Demo:** [Surgical Code Editor](https://christopherhammer.dev/assets/videos/narrated/project-demos/surgical-code-editor-narrated.mp4)
 
 ## Who Uses It
 
