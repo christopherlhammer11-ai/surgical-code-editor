@@ -1,60 +1,54 @@
 # Surgical Code Editor
 
-CLI tool for targeted code edits without line numbers—precision surgical strikes on your codebase.
+**Precise code edits for AI agents.** Surgical Code Editor makes targeted search-replace edits and clean diffs instead of rewriting whole files.
 
-<!-- badges -->
+Demo: **Watch the demo:** [Surgical Code Editor](https://christopherhammer.dev/assets/videos/narrated/project-demos/surgical-code-editor-narrated.mp4)
 
-## What It Does
+## Who Uses It
 
-Surgical Code Editor (`sce`) enables precise, targeted edits to source files using semantic patterns instead of fragile line numbers. Generate unified diffs, dry-run changes, and edit with confidence.
+- Coding agents that need safe file edits
+- Developer tools that generate patches
+- Solo developers who want clean diffs
+- Teams trying to reduce noisy AI-generated changes
 
-## Features
+## What It Solves
 
-- **CLI Command**: `sce` with intuitive subcommands
-- **5 Edit Operations**: replace, replace-all, insert-before, insert-after, delete
-- **No Line Numbers**: Target code by semantic context, not brittle row indices
-- **Unified Diff Output**: See exactly what will change before committing
-- **Dry-Run Mode**: editFile() with `--dry-run` flag to preview changes
-- **Smart Search**: Context-aware pattern matching for reliable edits
+AI coding tools often over-edit: they rewrite unrelated code, change formatting, and make review harder. Surgical Code Editor focuses on the exact block that needs to change.
+
+## Core Features
+
+- Replace, replace-all, insert-before, insert-after, and delete operations
+- Pattern-based targeting instead of fragile line numbers
+- Dry-run mode
+- Unified diff generation
+- TypeScript CLI/library surface
+
+## Example
+
+```bash
+sce replace src/auth.ts \
+  --find "function login(email: string)" \
+  --replace "async function login(email: string, password: string)" \
+  --dry-run
+```
 
 ## Quick Start
 
 ```bash
-npm install -g surgical-code-editor
-sce --help
+npm install
+npm run build
+npm test
 ```
 
-## Usage
+## Portfolio Context
 
-```bash
-# Replace a function signature
-sce replace src/auth.ts \
-  --find "function login(email: string)" \
-  --replace "async function login(email: string, password: string)"
+This is the editing layer a coding agent like Craig needs. It proves attention to reviewability, minimal diffs, and practical safety rather than flashy but risky AI rewrites.
 
-# Insert before a pattern
-sce insert-before src/app.ts \
-  --find "app.listen()" \
-  --text "console.log('Starting server...');"
+---
 
-# Dry-run to preview
-sce replace src/db.ts \
-  --find "const pool = new Pool()" \
-  --replace "const pool = await Pool.create()" \
-  --dry-run
-```
+Built by **Christopher L. Hammer** - self-taught AI/product builder shipping local-first tools, demos, and real product surfaces.
 
-## Tech Stack
+- Portfolio: [christopherhammer.dev](https://christopherhammer.dev)
+- Proof demos: [https://christopherhammer.dev#proof](https://christopherhammer.dev#proof)
+- GitHub: [christopherlhammer11-ai](https://github.com/christopherlhammer11-ai)
 
-- Commander.js (CLI framework)
-- TypeScript (type safety)
-
-## Part of Genesis Marketplace
-
-Powers the code transformation agent in the Genesis skill ecosystem.
-
-## Author
-
-Christopher L. Hammer  
-GitHub: [christopherlhammer11-ai](https://github.com/christopherlhammer11-ai)  
-Sites: [hammercg.com](https://hammercg.com) | [hammerlockai.com](https://hammerlockai.com)
